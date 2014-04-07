@@ -1,9 +1,9 @@
 {
   "App": {
-    "Name": "api-example-com"
+    "Name": "incentives-api"
   },
   "Server": {
-    "Port": 8080,
+    "Port": 3000,
     "Name": "api.example.com",
     "DefaultVersion": "1.0.0",
     "Acceptable": [ "application/json" ],

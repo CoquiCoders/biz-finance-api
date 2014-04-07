@@ -23,9 +23,11 @@ var bunyan  = require('bunyan');
  * Config
  */
 
-nconf.file({
-  file : path.join( __dirname, 'config', 'global.json' )
-});
+nconf.argv()
+  .env()
+  .file({
+    file : path.join( __dirname, 'config', 'global.json' )
+  });
 
 /**
  * Logging
