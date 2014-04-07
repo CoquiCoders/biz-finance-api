@@ -4,7 +4,7 @@
   },
   "Server": {
     "Port": 3000,
-    "Name": "api.example.com",
+    "Name": "incentives.api.com",
     "DefaultVersion": "1.0.0",
     "Acceptable": [ "application/json" ],
     "ThrottleRate": 50,
@@ -15,7 +15,7 @@
     "Dir": "./logs/",
     "Loggly": {
       "Enabled": false,
-      "Tags": [ "api-example-com" ],
+      "Tags": [ "incentives-api-com" ],
       "Endpoint": "https://logs-01.loggly.com/inputs/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/"
     }
   },
