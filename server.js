@@ -111,24 +111,18 @@ server.on('after', restify.auditLogger({
 }));
 
 /**
- * Middleware
+ * Controllers
  */
 
-var setupMiddleware = function (middlewareName) {
-  var middleware = require(path.join(__dirname, 'middleware', middlewareName));
-  return middleware.setup(server);
-};
+// Load Them First.
+var incentivesController = require('./controllers/incentiveController.js');
 
-[
-  'root',
-  // ... more middleware ... //
-]
-.map(setupMiddleware);
+// Paths.
+server.get({ path : '/', version : '1.0.0' }, incentivesController.v100.getIncentive);
 
 /**
  * Listen
  */
-
 server.listen(nconf.get('Server:Port'), function() {
   console.log();
   console.log( '%s now listening on %s', nconf.get('App:Name'), server.url );
