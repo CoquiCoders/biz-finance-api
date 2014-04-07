@@ -80,11 +80,11 @@ if ( process.env.NODE_ENV === 'production' ) {
   plugins.push( require( path.join(__dirname, 'plugins', 'customAuthorizationParser') )( restify.InvalidHeaderError, restify.NotAuthorizedError ) );
 }
 
-plugins.push( restify.bodyParser() );
-plugins.push( restify.gzipResponse() );
+plugins.push(restify.bodyParser());
+plugins.push(restify.gzipResponse());
 
 
-server.use( plugins );
+server.use(plugins);
 
 /**
  * CORS
@@ -114,22 +114,22 @@ server.on('after', restify.auditLogger({
  * Middleware
  */
 
-var setupMiddleware = function ( middlewareName ) {
-  var middleware = require( path.join(__dirname, 'middleware', middlewareName) );
-  return middleware.setup( server );
+var setupMiddleware = function (middlewareName) {
+  var middleware = require(path.join(__dirname, 'middleware', middlewareName));
+  return middleware.setup(server);
 };
 
 [
   'root',
   // ... more middleware ... //
 ]
-.map( setupMiddleware );
+.map(setupMiddleware);
 
 /**
  * Listen
  */
 
-server.listen( nconf.get('Server:Port'), function() {
+server.listen(nconf.get('Server:Port'), function() {
   console.log();
   console.log( '%s now listening on %s', nconf.get('App:Name'), server.url );
   console.log();
