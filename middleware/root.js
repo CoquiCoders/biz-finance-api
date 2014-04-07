@@ -11,14 +11,13 @@ var routes = [];
  * GET /
  * Version: 1.0.0
  */
-
 routes.push({
   meta: {
     method: 'GET',
-    path: '/',
+    path: '/hello/:name',
     version: '1.0.0',
   },
-  middleware: function( req, res, next ) {
+  middleware: function(req, res, next) {
     res.send({
       foo: 'bar'
     });
@@ -29,10 +28,8 @@ routes.push({
 /**
  * Setup
  */
-
-exports.setup = function ( server ) {
-
-  routes.forEach(function( route ) {
+exports.setup = function (server) {
+  routes.forEach(function(route) {
     server[route.meta.method.toLowerCase()](
       {
         path: route.meta.path,
@@ -41,5 +38,4 @@ exports.setup = function ( server ) {
       route.middleware
     );
   });
-
 };
