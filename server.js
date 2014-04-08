@@ -134,3 +134,5 @@ server.listen(nconf.get('Server:Port'), function() {
   console.log( '%s now listening on %s', nconf.get('App:Name'), server.url );
   console.log();
 });
+
+module.exports = server;
