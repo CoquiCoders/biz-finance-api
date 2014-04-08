@@ -18,6 +18,7 @@ global.nconf = require('nconf');
 var path    = require('path');
 var restify = require('restify');
 var bunyan  = require('bunyan');
+var mongoose = require('mongoose');
 
 /**
  * Config
@@ -89,7 +90,6 @@ server.use(plugins);
 /**
  * CORS
  */
-
 var corsOptions = {
   origins: nconf.get('CORS:Origins'),
   credentials: nconf.get('CORS:Credentials'),
@@ -111,9 +111,15 @@ server.on('after', restify.auditLogger({
 }));
 
 /**
+ * Database
+ */
+mongoose.connect(nconf.get('MONGODB'));
+mongoose.connection.on('error', function() {
+  console.error('✗ MongoDB Connection Error. Please make sure MongoDB is running.');
+});
+/**
  * Controllers
  */
-
 // Load Them First.
 var incentivesController = require('./controllers/incentiveController.js');
 

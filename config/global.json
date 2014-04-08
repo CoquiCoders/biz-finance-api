@@ -2,6 +2,7 @@
   "App": {
     "Name": "incentives-api"
   },
+  "MONGODB": "mongodb://localhost:27017/incentives-api",
   "Server": {
     "Port": 3000,
     "Name": "incentives.api.com",
