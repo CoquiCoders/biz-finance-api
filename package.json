@@ -10,6 +10,7 @@
     "nconf": "0.6.x",
     "bunyan": "0.22.x",
     "request": "2.34.x",
-    "lodash": "*"
+    "lodash": "*",
+    "mocha": "~1.18.2"
   }
 }
