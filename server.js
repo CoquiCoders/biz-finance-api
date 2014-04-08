@@ -117,6 +117,7 @@ mongoose.connect(nconf.get('MONGODB'));
 mongoose.connection.on('error', function() {
   console.error('✗ MongoDB Connection Error. Please make sure MongoDB is running.');
 });
+
 /**
  * Controllers
  */
