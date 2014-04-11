@@ -7,7 +7,6 @@ Incentives API provides a structured directory of incentives.
 # Group All Incentives
 Incentives related resources of the **Incentives API**
 
-
 ## Incentive [/incentives/{id}]
 A single Incentive object with all its details
 
@@ -23,7 +22,18 @@ A single Incentive object with all its details
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+            { 
+              "id": 2, 
+              "title": "Title",
+              "governing_law": ["Law 73"],
+              "governing_agency": "PRIDCO", // managed by only one
+              
+            }
+
+
+
+
+# Group Saved Examples - NON WORKING
 
 ### Remove a Note [DELETE]
 + Response 204
