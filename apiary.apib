@@ -4,16 +4,16 @@ HOST: http://www.incentivesapi.com
 # Incentives
 Incentives API provides a structured directory of incentives.
 
-# Group All Incentives
+# Group All Incentive Programs
 Incentives related resources of the **Incentives API**
 
 ## Incentive [/incentives/{id}]
-A single Incentive object with all its details
+A single Incentive Program object with all its details
 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Incentive to perform action with. Has example value.
 
-### Retrieve a Note [GET]
+### Retrieve an Incentive Program [GET]
 + Response 200 (application/json)
 
     + Header
@@ -24,10 +24,9 @@ A single Incentive object with all its details
 
             { 
               "id": 2, 
-              "title": "Title",
+              "title": "Research And Development Tax Credit",
               "governing_law": ["Law 73"],
-              "governing_agency": "PRIDCO", // managed by only one
-              
+              "governing_agency": "PRIDCO", // managed by only one;  Change this to object?
             }
 
 
