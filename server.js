@@ -78,7 +78,9 @@ var plugins = [
 ];
 
 if ( process.env.NODE_ENV === 'production' ) {
-  plugins.push( require( path.join(__dirname, 'plugins', 'customAuthorizationParser') )( restify.InvalidHeaderError, restify.NotAuthorizedError ) );
+  var customAuthParserPath = path.join(__dirname, 'plugins', 'customAuthorizationParser');
+  var customAuthParser = require(customAuthParserPath)(restify.InvalidHeaderError, restify.NotAuthorizedError);
+  plugins.push(customAuthParser);
 }
 
 plugins.push(restify.bodyParser());
@@ -122,10 +124,10 @@ mongoose.connection.on('error', function() {
  * Controllers
  */
 // Load Them First.
-var incentivesController = require('./controllers/incentiveController.js');
+var bizFinanceResourceController = require('./controllers/bizFinanceResourceController.js');
 
 // Paths.
-server.get({ path : '/', version : '1.0.0' }, incentivesController.v100.getIncentive);
+server.get({ path : '/', version : '1.0.0' }, bizFinanceResourceController.v100.getIncentive);
 
 /**
  * Listen

@@ -1,6 +1,6 @@
-# Incentives API
+# Biz Finance API
 
-[![Build Status](https://travis-ci.org/CoquiCoders/incentives-api.svg?branch=master)](https://travis-ci.org/CoquiCoders/incentives-api)
+[![Build Status](https://travis-ci.org/CoquiCoders/biz-finance-api.svg?branch=master)](https://travis-ci.org/CoquiCoders/biz-finance-api)
 
 ## Index
 
