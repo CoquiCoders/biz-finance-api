@@ -1,11 +1,11 @@
 {
   "App": {
-    "Name": "incentives-api"
+    "Name": "biz-finance-api"
   },
-  "MONGODB": "mongodb://localhost:27017/incentives-api",
+  "MONGODB": "mongodb://localhost:27017/biz-finance-api",
   "Server": {
     "Port": 3000,
-    "Name": "incentives.api.com",
+    "Name": "biz-finance.api.com",
     "DefaultVersion": "1.0.0",
     "Acceptable": [ "application/json" ],
     "ThrottleRate": 50,
@@ -16,7 +16,7 @@
     "Dir": "./logs/",
     "Loggly": {
       "Enabled": false,
-      "Tags": [ "incentives-api-com" ],
+      "Tags": [ "biz-finance-api-com" ],
       "Endpoint": "https://logs-01.loggly.com/inputs/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/"
     }
   },
