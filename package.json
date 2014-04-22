@@ -16,6 +16,9 @@
     "mongoose": "~3.8.8",
     "chai": "~1.9.1",
     "supertest": "~0.10.0",
-    "solr-client": "~0.2.9"
+    "solr-client": "~0.2.9",
+    "underscore": "~1.6.0",
+    "string": "~1.8.0",
+    "moment": "~2.6.0"
   }
 }
