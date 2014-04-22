@@ -107,7 +107,6 @@ if ( corsOptions.headers.length ) {
 /**
  * Request / Response Logging
  */
-
 server.on('after', restify.auditLogger({
   log: Logger
 }));
